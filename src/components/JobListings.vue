@@ -21,7 +21,7 @@ defineProps({
 onMounted(async () => {
   try {
     state.isLoading = true
-    const response = await axios.get<Job[]>('http://localhost:5000/jobs')
+    const response = await axios.get<Job[]>('/api/jobs')
     state.jobs = response.data
   } catch (error) {
     console.error('Error fetching jobs:', error)
